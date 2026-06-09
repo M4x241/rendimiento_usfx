@@ -1,0 +1,181 @@
+/* Estilos para la sección de perfil de ayudante */
+
+.perfilAyudante
+{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.infoGeneral
+{
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.infoGeneral h2
+{
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+}
+
+.detalles
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.detalles p
+{
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.detalles strong
+{
+    color: #333;
+}
+
+/* Sección de comentarios */
+
+.seccionComentarios
+{
+    margin-top: 30px;
+}
+
+.seccionComentarios h3
+{
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #dddddd;
+    padding-bottom: 10px;
+}
+
+.listaComentarios
+{
+    margin: 20px 0;
+}
+
+.comentario
+{
+    background-color: #fafafa;
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.encabezadoComentario
+{
+    margin-bottom: 10px;
+}
+
+.encabezadoComentario strong
+{
+    color: #333;
+}
+
+.calificacion
+{
+    color: #FFD700;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.textoComentario
+{
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.fechaComentario
+{
+    color: #999;
+    font-size: 12px;
+}
+
+/* Formulario de comentario */
+
+.formularioComentario
+{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.formularioComentario h4
+{
+    color: #333;
+    margin-top: 0;
+}
+
+#formComentario div
+{
+    margin-bottom: 15px;
+}
+
+#formComentario label
+{
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+#formComentario input[type="text"],
+#formComentario input[type="email"],
+#formComentario select,
+#formComentario textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: Arial;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#formComentario textarea
+{
+    resize: vertical;
+    min-height: 120px;
+}
+
+#btnEnviarComentario
+{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+#btnEnviarComentario:hover
+{
+    background-color: #45a049;
+}
+
+/* Responsive */
+
+@media (max-width: 600px)
+{
+    .detalles
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .formularioComentario
+    {
+        padding: 15px;
+    }
+}
