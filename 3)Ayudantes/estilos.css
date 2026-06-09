@@ -1,0 +1,41 @@
+body
+{
+    font-family: Arial;
+    margin: 20px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.filtros
+{
+    margin-bottom: 20px;
+}
+
+select,
+button
+{
+    padding: 8px;
+    margin-right: 5px;
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td
+{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th
+{
+    background-color: #dddddd;
+}
