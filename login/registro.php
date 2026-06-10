@@ -103,9 +103,15 @@ Registrarse </button>
 
 <br>
 
-<a href="index.php" class="btn btn-secondary w-100">
-Volver al Login
-</a>
+    <a href="index.php" class="btn btn-secondary w-100">
+    Volver al Login
+    </a>
+
+    <br><br>
+
+    <a href="../index.html" class="btn btn-outline-primary w-100">
+    Página Principal
+    </a>
 
 </div>
 

@@ -22,9 +22,9 @@ if (!isset($_SESSION['usuario_id'])) {
     <aside class="sidebar">
         <div class="brand">Rendimiento USFX</div>
 
-        <a href="#" class="menu-item">Dashboard</a>
-        <a href="#" class="menu-item">Análisis de datos</a>
-        <a href="#" class="menu-item">Ayudantes</a>
+        <a href="../login/dashboard.php" class="menu-item">Dashboard</a>
+        <a href="../login/dashboard.php" class="menu-item">Análisis de datos</a>
+        <a href="../3)Ayudantes/index.html" class="menu-item">Ayudantes</a>
         <a href="#" class="menu-item active">Perfil</a>
         <a href="php/logout.php" class="menu-item salir">Cerrar sesión</a>
     </aside>

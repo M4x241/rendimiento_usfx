@@ -42,7 +42,7 @@ while($fila = mysqli_fetch_assoc($resultado))
     echo "<td>".$fila["correo"]."</td>";
 
     echo "<td>";
-    echo "<button>Ver Perfil</button>";
+    echo "<a href='../seccion%20de%20perfil%20de%20ayudantes/perfil_ayudante.html?id=".$fila["id_ayudante"]."'><button>Ver Perfil</button></a>";
     echo "</td>";
 
     echo "</tr>";

@@ -44,6 +44,10 @@ if(!isset($_SESSION["id_usuario"]))
         <br>
 
 
+        <a href="../3)Ayudantes/index.html">Ayudantes</a>
+        <br>
+        <a href="../5/perfil.php">Mi Perfil</a>
+        <br><br>
         <a href="logout.php">Cerrar Sesión</a>
 
     </div>

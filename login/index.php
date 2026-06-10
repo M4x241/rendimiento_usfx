@@ -59,8 +59,9 @@ rel="stylesheet"
 
 <div class="card shadow">
 
-<div class="card-header bg-primary text-white">
-<h3>Inicio de Sesión</h3>
+<div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+<h3 class="mb-0">Inicio de Sesión</h3>
+<a href="../index.html" class="btn btn-sm btn-outline-light">← Inicio</a>
 </div>
 
 <div class="card-body">
@@ -106,12 +107,15 @@ Ingresar
 
 <br>
 
-<a
-href="registro.php"
-class="btn btn-success w-100"
->
-Crear Cuenta
-</a>
+    <a href="registro.php" class="btn btn-success w-100">
+    Crear Cuenta
+    </a>
+
+    <br><br>
+
+    <a href="../3)Ayudantes/index.html" class="btn btn-outline-secondary w-100">
+    Ver Ayudantes
+    </a>
 
 </div>
 

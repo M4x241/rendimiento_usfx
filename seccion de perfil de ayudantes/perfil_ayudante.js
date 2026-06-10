@@ -36,6 +36,7 @@ function mostrarPerfil(datos)
 {
     var html = "";
 
+    html += "<a href='../3)Ayudantes/index.html' class='btn btn-secondary mb-3'>← Volver a Ayudantes</a>";
     html += "<div class='perfilAyudante'>";
 
     // Información general del ayudante

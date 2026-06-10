@@ -43,6 +43,13 @@ if (isset($_SESSION['usuario_id'])) {
     <p class="small text-muted mt-3 mb-0 text-center">
         Usuario demo: admin@demo.com / 123456
     </p>
+
+    <hr>
+
+    <div class="text-center">
+        <a href="../index.html" class="btn btn-outline-primary btn-sm">← Página Principal</a>
+        <a href="../login/index.php" class="btn btn-outline-secondary btn-sm">Login Antiguo</a>
+    </div>
 </div>
 
 <script src="js/login.js"></script>
