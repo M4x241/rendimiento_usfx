@@ -1,11 +1,8 @@
 const formLogin = document.getElementById("formLogin");
 const mensaje = document.getElementById("mensaje");
-
 formLogin.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const datos = new FormData(formLogin);
-
     fetch("php/login.php", {
         method: "POST",
         body: datos
@@ -13,10 +10,9 @@ formLogin.addEventListener("submit", function (e) {
     .then(respuesta => respuesta.json())
     .then(data => {
         mostrarMensaje(data.estado, data.mensaje);
-
         if (data.estado === "ok") {
             setTimeout(() => {
-                window.location.href = "perfil.php";
+                window.location.href = "../login/dashboard.php";
             }, 800);
         }
     })
@@ -25,15 +21,12 @@ formLogin.addEventListener("submit", function (e) {
         console.log(error);
     });
 });
-
 function mostrarMensaje(estado, texto) {
     mensaje.classList.remove("d-none", "alert-success", "alert-danger");
-
     if (estado === "ok") {
         mensaje.classList.add("alert-success");
     } else {
         mensaje.classList.add("alert-danger");
     }
-
     mensaje.textContent = texto;
 }

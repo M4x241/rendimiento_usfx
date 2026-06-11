@@ -1,10 +1,8 @@
 const mensaje = document.getElementById("mensaje");
-
 const fotoVista = document.getElementById("fotoVista");
 const nombreVista = document.getElementById("nombreVista");
 const correoVista = document.getElementById("correoVista");
 const rolVista = document.getElementById("rolVista");
-
 const formPerfil = document.getElementById("formPerfil");
 const formPassword = document.getElementById("formPassword");
 
@@ -16,15 +14,12 @@ function obtenerPerfil() {
         .then(data => {
             if (data.estado === "ok") {
                 const usuario = data.usuario;
-
                 nombreVista.textContent = usuario.nombre;
                 correoVista.textContent = usuario.correo;
                 rolVista.textContent = usuario.rol;
-
                 if (usuario.foto && usuario.foto !== "") {
                     fotoVista.src = usuario.foto;
                 }
-
                 document.getElementById("nombre").value = usuario.nombre;
                 document.getElementById("correo").value = usuario.correo;
                 document.getElementById("carrera").value = usuario.carrera;
@@ -42,9 +37,7 @@ function obtenerPerfil() {
 
 formPerfil.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const datos = new FormData(formPerfil);
-
     fetch("php/actualizar_perfil.php", {
         method: "POST",
         body: datos
@@ -52,7 +45,6 @@ formPerfil.addEventListener("submit", function (e) {
     .then(respuesta => respuesta.json())
     .then(data => {
         mostrarMensaje(data.estado, data.mensaje);
-
         if (data.estado === "ok") {
             obtenerPerfil();
         }
@@ -65,9 +57,7 @@ formPerfil.addEventListener("submit", function (e) {
 
 formPassword.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const datos = new FormData(formPassword);
-
     fetch("php/cambiar_password.php", {
         method: "POST",
         body: datos
@@ -75,28 +65,24 @@ formPassword.addEventListener("submit", function (e) {
     .then(respuesta => respuesta.json())
     .then(data => {
         mostrarMensaje(data.estado, data.mensaje);
-
         if (data.estado === "ok") {
             formPassword.reset();
         }
     })
     .catch(error => {
-        mostrarMensaje("error", "Error al cambiar contraseña");
+        mostrarMensaje("error", "Error al cambiar contrasena");
         console.log(error);
     });
 });
 
 function mostrarMensaje(estado, texto) {
     mensaje.classList.remove("d-none", "alert-success", "alert-danger");
-
     if (estado === "ok") {
         mensaje.classList.add("alert-success");
     } else {
         mensaje.classList.add("alert-danger");
     }
-
     mensaje.textContent = texto;
-
     setTimeout(() => {
         mensaje.classList.add("d-none");
     }, 3500);
